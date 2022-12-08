@@ -76,7 +76,7 @@ class _HomePageBody extends StatelessWidget {
       case 3:
         return const ReservasScreen();
       case 4:
-        return const UserProfileScreen();
+        return UserProfileScreen();
 
       default:
         return const HomeScreen();

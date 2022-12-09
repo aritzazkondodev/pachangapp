@@ -4,14 +4,29 @@ import 'package:provider/provider.dart';
 
 import 'package:pachangapp/screens/screens.dart';
 import 'package:pachangapp/providers/providers.dart';
+import 'package:pachangapp/user_preferences/preferences.dart';
 
-void main() {
+void main() async {
+  //Carga de las preferencias de usuario
+  WidgetsFlutterBinding.ensureInitialized();
+  await Preferences.init();
+
+  //Quitar overlay bottom
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [
     SystemUiOverlay.top,
   ]);
 
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => NavigationProvider()),
+        ChangeNotifierProvider(
+            create: (_) => ThemeProvider(isDarkMode: Preferences.isDarkMode)),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -19,18 +34,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => NavigationProvider()),
-      ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Pachangapp',
-        initialRoute: 'main',
-        routes: {
-          'main': (_) => const MainScreen(),
-        },
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Pachangapp',
+      initialRoute: 'main',
+      routes: {
+        'main': (_) => const MainScreen(),
+      },
+      theme: Provider.of<ThemeProvider>(context).currentTheme,
     );
   }
 }

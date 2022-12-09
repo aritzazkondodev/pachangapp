@@ -5,6 +5,7 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 
 import 'package:pachangapp/providers/providers.dart';
 import 'package:pachangapp/screens/screens.dart';
+import 'package:pachangapp/theme/theme.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -17,14 +18,14 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       body: const _HomePageBody(),
       bottomNavigationBar: Container(
-        color: Colors.black,
+        color: AppColors.black,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
           child: GNav(
-              backgroundColor: Colors.black,
+              backgroundColor: AppColors.black,
               color: Colors.white,
               activeColor: Colors.white,
-              tabBackgroundColor: Colors.orange,
+              tabBackgroundColor: AppColors.mainColor,
               padding: const EdgeInsets.all(16),
               gap: 8,
               tabs: const [
@@ -76,7 +77,7 @@ class _HomePageBody extends StatelessWidget {
       case 3:
         return const ReservasScreen();
       case 4:
-        return UserProfileScreen();
+        return const UserProfileScreen();
 
       default:
         return const HomeScreen();

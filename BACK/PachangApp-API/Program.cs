@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using PachangApp_API.Helpers;
+using PachangApp.Repositorio;
 
 var builder = WebApplication.CreateBuilder(args);
 

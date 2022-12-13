@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "PachangApp.Core/1.0.0": {
+        "dependencies": {
+          "PachangApp.Interfaces.Core": "1.0.0"
+        },
+        "runtime": {
+          "PachangApp.Core.dll": {}
+        }
+      },
+      "PachangApp.Interfaces.Core/1.0.0": {
+        "runtime": {
+          "PachangApp.Interfaces.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PachangApp.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PachangApp.Interfaces.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

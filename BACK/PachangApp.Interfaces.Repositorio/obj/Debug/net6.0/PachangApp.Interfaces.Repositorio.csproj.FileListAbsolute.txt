@@ -1,0 +1,12 @@
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Interfaces.Repositorio\bin\Debug\net6.0\PachangApp.Interfaces.Repositorio.deps.json
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Interfaces.Repositorio\bin\Debug\net6.0\PachangApp.Interfaces.Repositorio.dll
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Interfaces.Repositorio\bin\Debug\net6.0\PachangApp.Interfaces.Repositorio.pdb
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Interfaces.Repositorio\obj\Debug\net6.0\PachangApp.Interfaces.Repositorio.csproj.AssemblyReference.cache
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Interfaces.Repositorio\obj\Debug\net6.0\PachangApp.Interfaces.Repositorio.GeneratedMSBuildEditorConfig.editorconfig
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Interfaces.Repositorio\obj\Debug\net6.0\PachangApp.Interfaces.Repositorio.AssemblyInfoInputs.cache
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Interfaces.Repositorio\obj\Debug\net6.0\PachangApp.Interfaces.Repositorio.AssemblyInfo.cs
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Interfaces.Repositorio\obj\Debug\net6.0\PachangApp.Interfaces.Repositorio.csproj.CoreCompileInputs.cache
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Interfaces.Repositorio\obj\Debug\net6.0\PachangApp.Interfaces.Repositorio.dll
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Interfaces.Repositorio\obj\Debug\net6.0\refint\PachangApp.Interfaces.Repositorio.dll
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Interfaces.Repositorio\obj\Debug\net6.0\PachangApp.Interfaces.Repositorio.pdb
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Interfaces.Repositorio\obj\Debug\net6.0\ref\PachangApp.Interfaces.Repositorio.dll

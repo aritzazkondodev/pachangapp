@@ -1,0 +1,15 @@
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Core\bin\Debug\net6.0\PachangApp.Core.deps.json
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Core\bin\Debug\net6.0\PachangApp.Core.dll
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Core\bin\Debug\net6.0\PachangApp.Core.pdb
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Core\bin\Debug\net6.0\PachangApp.Interfaces.Core.dll
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Core\bin\Debug\net6.0\PachangApp.Interfaces.Core.pdb
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Core\obj\Debug\net6.0\PachangApp.Core.csproj.AssemblyReference.cache
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Core\obj\Debug\net6.0\PachangApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Core\obj\Debug\net6.0\PachangApp.Core.AssemblyInfoInputs.cache
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Core\obj\Debug\net6.0\PachangApp.Core.AssemblyInfo.cs
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Core\obj\Debug\net6.0\PachangApp.Core.csproj.CoreCompileInputs.cache
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Core\obj\Debug\net6.0\PachangApp.Core.csproj.CopyComplete
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Core\obj\Debug\net6.0\PachangApp.Core.dll
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Core\obj\Debug\net6.0\refint\PachangApp.Core.dll
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Core\obj\Debug\net6.0\PachangApp.Core.pdb
+D:\A\PachangApp\pachangapp\BACK\PachangApp.Core\obj\Debug\net6.0\ref\PachangApp.Core.dll

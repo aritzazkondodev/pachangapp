@@ -165,7 +165,7 @@ class __ConfigurationPageState extends State<_ConfigurationPage> {
         child: Column(
           children: [
             const SizedBox(height: 20),
-            const Text('Configuracion', style: TextStyle(fontSize: 50)),
+            Text('Configuracion', style: Theme.of(context).textTheme.headline1),
             const Divider(),
             SwitchListTile.adaptive(
               value: Preferences.isDarkMode,

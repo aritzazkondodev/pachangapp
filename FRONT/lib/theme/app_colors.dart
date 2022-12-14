@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 // usage: Container(color: AppColors.container)
 class AppColors {
-  static Color black = const Color.fromARGB(255, 27, 28, 30);
+  static Color black = Colors.black;
+  static Color white = Colors.white;
   static Color mainColor = const Color.fromARGB(255, 251, 133, 0);
   static Color danger = Colors.red;
 

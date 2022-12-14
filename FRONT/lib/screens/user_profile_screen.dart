@@ -138,10 +138,10 @@ class __DataPageState extends State<_DataPage> {
       width: double.infinity,
       child: SingleChildScrollView(
         child: Column(
-          children: const [
-            SizedBox(height: 20),
-            Text('Datos', style: TextStyle(fontSize: 50)),
-            Divider(),
+          children: [
+            const SizedBox(height: 20),
+            Text('Datos', style: Theme.of(context).textTheme.headline1),
+            const Divider(),
           ],
         ),
       ),

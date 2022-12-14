@@ -123,7 +123,7 @@ class _SidebarPageState extends State<SidebarPage> {
   }
 }
 
-//TODO
+//TODO: Implementar formulario (provider del form) datos usuario
 class _DataPage extends StatefulWidget {
   const _DataPage({super.key});
 
@@ -134,9 +134,17 @@ class _DataPage extends StatefulWidget {
 class __DataPageState extends State<_DataPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.redAccent,
-      child: const Text('Datos', style: TextStyle(fontSize: 50)),
+    return SizedBox(
+      width: double.infinity,
+      child: SingleChildScrollView(
+        child: Column(
+          children: const [
+            SizedBox(height: 20),
+            Text('Datos', style: TextStyle(fontSize: 50)),
+            Divider(),
+          ],
+        ),
+      ),
     );
   }
 }
@@ -151,17 +159,17 @@ class _ConfigurationPage extends StatefulWidget {
 class __ConfigurationPageState extends State<_ConfigurationPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
-      // color: Colors.blueAccent,
       child: SingleChildScrollView(
         child: Column(
           children: [
+            const SizedBox(height: 20),
             const Text('Configuracion', style: TextStyle(fontSize: 50)),
             const Divider(),
             SwitchListTile.adaptive(
               value: Preferences.isDarkMode,
-              title: const Text('Darkmode'),
+              title: const Text('Modo oscuro'),
               onChanged: (value) {
                 Preferences.isDarkMode = value;
                 final themeProvider =
@@ -172,6 +180,15 @@ class __ConfigurationPageState extends State<_ConfigurationPage> {
                 setState(() {});
               },
             ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                //TODO: Implementar logout
+              },
+              style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(AppColors.danger)),
+              child: const Text('Cerrar sesion'),
+            )
           ],
         ),
       ),

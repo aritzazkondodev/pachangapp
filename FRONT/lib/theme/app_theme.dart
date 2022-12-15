@@ -28,7 +28,7 @@ class AppTheme {
       headline1: TextStyle(
         fontSize: 35,
         fontWeight: FontWeight.bold,
-        color: AppColors.black,
+        color: AppColors.darkBlack,
       ),
       bodyText2: const TextStyle(
         fontSize: 14,
@@ -50,9 +50,9 @@ class AppTheme {
         fontWeight: FontWeight.bold,
         color: AppColors.white,
       ),
-      bodyText2: const TextStyle(
+      bodyText2: TextStyle(
         fontSize: 14,
-        color: Colors.green,
+        color: AppColors.white,
       ),
     ),
   );

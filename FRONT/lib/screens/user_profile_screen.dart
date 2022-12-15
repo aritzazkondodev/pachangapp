@@ -107,7 +107,7 @@ class _SidebarPageState extends State<SidebarPage> {
           },
           // body: _body(size, context),
           body: _content,
-          backgroundColor: AppColors.black,
+          backgroundColor: AppColors.darkBlack,
           selectedTextColor: AppColors.mainColor,
           selectedIconColor: AppColors.mainColor,
           textStyle: const TextStyle(fontSize: 15, fontStyle: FontStyle.italic),

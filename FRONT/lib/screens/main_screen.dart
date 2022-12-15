@@ -18,11 +18,11 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       body: const _HomePageBody(),
       bottomNavigationBar: Container(
-        color: AppColors.black,
+        color: AppColors.darkBlack,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
           child: GNav(
-              backgroundColor: AppColors.black,
+              backgroundColor: AppColors.darkBlack,
               color: Colors.white,
               activeColor: Colors.white,
               tabBackgroundColor: AppColors.mainColor,

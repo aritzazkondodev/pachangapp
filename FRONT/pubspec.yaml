@@ -12,13 +12,19 @@ dependencies:
   flutter:
     sdk: flutter
 
+  #Iconos
   cupertino_icons: ^1.0.2
   line_icons: ^2.0.0
+  #Manejar state
   provider: ^6.0.4
+  #Preferencias usuario
   shared_preferences: ^2.0.15
+  #Navbar inferior
   google_nav_bar: ^5.0.6
-  sidebarx: ^0.14.0
+  #Sidebar perfil
   collapsible_sidebar: ^2.0.3+2
+  #Componentes UI
+  getwidget: ^2.0.4
 
 dev_dependencies:
   flutter_test:

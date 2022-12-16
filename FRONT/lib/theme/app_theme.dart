@@ -3,20 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:pachangapp/theme/theme.dart';
 
 class AppTheme {
-  // static final ThemeData ligthTheme = ThemeData.light().copyWith(
-  //   //Primary color
-  //   primaryColor: AppColors.mainColor,
-  //   textTheme: TextTheme(
-  //     headline1: TextStyle(
-  //       fontSize: 35,
-  //       // fontFamily: 'Rubik',
-  //       fontWeight: FontWeight.bold,
-  //       color: AppColors.black,
-  //     ),
-  //     bodyText2: TextStyle(fontSize: 14, color: Colors.green),
-  //   ),
-  // );
-
   static final ThemeData ligthTheme = ThemeData(
     fontFamily: 'Rubik',
     colorScheme: ColorScheme.fromSwatch().copyWith(
@@ -35,6 +21,27 @@ class AppTheme {
         color: Colors.blue,
       ),
     ),
+
+    //Borde de los input(Textfield, ...)
+    inputDecorationTheme: InputDecorationTheme(
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10),
+        borderSide: BorderSide(
+          width: 1,
+          color: AppColors.mainColor,
+        ),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10),
+        borderSide: BorderSide(
+          width: 1,
+          color: AppColors.mainColor,
+        ),
+      ),
+    ),
+
+    //Color iconos
+    iconTheme: IconThemeData(color: AppColors.white),
   );
 
   static final ThemeData darkTheme = ThemeData(
@@ -55,5 +62,8 @@ class AppTheme {
         color: AppColors.white,
       ),
     ),
+
+    //Color iconos
+    iconTheme: IconThemeData(color: AppColors.white),
   );
 }

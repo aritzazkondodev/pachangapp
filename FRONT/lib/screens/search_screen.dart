@@ -4,17 +4,24 @@ import 'package:getwidget/getwidget.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:pachangapp/theme/theme.dart';
 
-class SearchScreen extends StatelessWidget {
+class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
 
   @override
+  State<SearchScreen> createState() => _SearchScreenState();
+}
+
+class _SearchScreenState extends State<SearchScreen> {
+  double _currentSliderValue = 5;
+
+  @override
   Widget build(BuildContext context) {
-    List list = [
-      "Campo 1",
-      "Campo 2",
-      "Campo 3",
-      "Campo 4",
-      "Campo 5",
+    List citiesList = [
+      "Nombre ciudad 1, Nombre Provincia",
+      "Nombre ciudad 2, Nombre Provincia",
+      "Nombre ciudad 3, Nombre Provincia",
+      "Nombre ciudad 4, Nombre Provincia",
+      "Nombre ciudad 5, Nombre Provincia",
     ];
 
     return Scaffold(
@@ -32,43 +39,61 @@ class SearchScreen extends StatelessWidget {
                   Flexible(
                     //TODO: Añadir sugerecias con Autocomplete()
                     child: TextField(
-                      style: TextStyle(color: AppColors.darkBlack),
                       decoration: InputDecoration(
                         contentPadding:
-                            const EdgeInsets.symmetric(vertical: 15),
-                        fillColor: Colors.white,
+                            const EdgeInsets.only(left: 15, right: 15),
                         filled: true,
+                        fillColor: AppColors.white,
+                        hintText: "Buscar...",
+                        hintStyle: const TextStyle(color: Colors.grey),
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide.none),
-                        hintText: 'Buscar',
-                        hintStyle:
-                            const TextStyle(color: Colors.grey, fontSize: 17),
-                        prefixIcon: Icon(
-                          LineIcons.search,
-                          color: AppColors.mainColor,
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: const BorderSide(
+                            width: 0,
+                            style: BorderStyle.none,
+                          ),
+                        ),
+                        suffixIcon: InkWell(
+                          onTap: () {
+                            print('borrar busqueda');
+                          },
+                          child: const Icon(LineIcons.times),
                         ),
                       ),
                     ),
                   ),
                   const SizedBox(width: 10),
-                  ElevatedButton.icon(
-                    style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        padding: const EdgeInsets.all(14)),
-                    //TODO: Implementar busqueda
-                    onPressed: () {},
-                    icon: const Icon(LineIcons.search),
-                    label: const Text(''),
-                  )
+                  //TODO: Implementar busqueda
+                  Ink(
+                    decoration: BoxDecoration(
+                      color: AppColors.mainColor,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: IconButton(
+                      splashRadius: 30,
+                      splashColor: AppColors.accentColor,
+                      onPressed: () => {
+                        print('buscar'),
+                      },
+                      icon: const Icon(LineIcons.search),
+                    ),
+                  ),
                 ],
               ),
             ),
             const SizedBox(height: 20),
             const Text('Distancia de busqueda'),
-            Slider(value: 10, max: 100, onChanged: (value) {})
+            Slider(
+              value: _currentSliderValue,
+              label: '${_currentSliderValue.round().toString()} km',
+              min: 5,
+              max: 55,
+              divisions: 5,
+              onChanged: (value) {
+                _currentSliderValue = value;
+                setState(() {});
+              },
+            ),
           ],
         ),
       ),

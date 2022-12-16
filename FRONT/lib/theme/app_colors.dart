@@ -13,7 +13,7 @@ class AppColors {
 
   static Color danger = Colors.red;
 
-  //ejemplos
+  //EJEMPLOS
   static Color container = const Color.fromARGB(255, 37, 76, 95);
   static Color background = Colors.black;
   static Color text = Colors.white;

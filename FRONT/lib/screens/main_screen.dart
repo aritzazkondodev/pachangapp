@@ -15,44 +15,47 @@ class MainScreen extends StatelessWidget {
     final navigationProvider = Provider.of<NavigationProvider>(context);
     final currentIndex = navigationProvider.selectedMenuOpt;
 
-    return Scaffold(
-      body: const _HomePageBody(),
-      bottomNavigationBar: Container(
-        color: AppColors.darkBlack,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-          child: GNav(
-              backgroundColor: AppColors.darkBlack,
-              color: Colors.white,
-              activeColor: Colors.white,
-              tabBackgroundColor: AppColors.mainColor,
-              padding: const EdgeInsets.all(16),
-              gap: 8,
-              tabs: const [
-                GButton(
-                  icon: LineIcons.search,
-                  text: 'Buscar',
-                ),
-                GButton(
-                  icon: LineIcons.newspaper,
-                  text: 'Novedades',
-                ),
-                GButton(
-                  icon: LineIcons.home,
-                  text: 'Inicio',
-                ),
-                GButton(
-                  icon: LineIcons.calendar,
-                  text: 'Reservas',
-                ),
-                GButton(
-                  icon: LineIcons.user,
-                  text: 'Perfil',
-                ),
-              ],
-              selectedIndex: currentIndex,
-              onTabChange: (index) =>
-                  navigationProvider.selectedMenuOpt = index),
+    return SafeArea(
+      bottom: true,
+      child: Scaffold(
+        body: const _HomePageBody(),
+        bottomNavigationBar: Container(
+          color: AppColors.darkBlack,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+            child: GNav(
+                backgroundColor: AppColors.darkBlack,
+                color: Colors.white,
+                activeColor: Colors.white,
+                tabBackgroundColor: AppColors.mainColor,
+                padding: const EdgeInsets.all(15),
+                gap: 8,
+                tabs: const [
+                  GButton(
+                    icon: LineIcons.search,
+                    text: 'Buscar',
+                  ),
+                  GButton(
+                    icon: LineIcons.newspaper,
+                    text: 'Novedades',
+                  ),
+                  GButton(
+                    icon: LineIcons.home,
+                    text: 'Inicio',
+                  ),
+                  GButton(
+                    icon: LineIcons.calendar,
+                    text: 'Reservas',
+                  ),
+                  GButton(
+                    icon: LineIcons.user,
+                    text: 'Perfil',
+                  ),
+                ],
+                selectedIndex: currentIndex,
+                onTabChange: (index) =>
+                    navigationProvider.selectedMenuOpt = index),
+          ),
         ),
       ),
     );

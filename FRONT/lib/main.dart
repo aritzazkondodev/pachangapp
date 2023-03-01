@@ -13,16 +13,16 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Preferences.init();
 
-  //Quitar overlay bottom
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky, overlays: [
-    SystemUiOverlay.top,
-  ]);
+  // Quitar overlay bottom
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
 
-  //Status bar transparente
+  // Status bar transparente
   SystemChrome.setSystemUIOverlayStyle(
     SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
-        systemNavigationBarColor: AppColors.darkBlack),
+        systemNavigationBarColor: AppColors.darkBlack,
+        systemNavigationBarContrastEnforced: false  ,
+        ),
   );
 
   runApp(

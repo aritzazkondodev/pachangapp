@@ -6,19 +6,23 @@ import 'package:pachangapp/screens/screens.dart';
 import 'package:pachangapp/providers/providers.dart';
 import 'package:pachangapp/user_preferences/preferences.dart';
 
+import 'theme/theme.dart';
+
 void main() async {
   //Carga de las preferencias de usuario
   WidgetsFlutterBinding.ensureInitialized();
   await Preferences.init();
 
   //Quitar overlay bottom
-  WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky, overlays: [
     SystemUiOverlay.top,
   ]);
 
+  //Status bar transparente
   SystemChrome.setSystemUIOverlayStyle(
-    const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+    SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        systemNavigationBarColor: AppColors.darkBlack),
   );
 
   runApp(

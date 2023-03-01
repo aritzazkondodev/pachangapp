@@ -17,6 +17,10 @@ void main() async {
     SystemUiOverlay.top,
   ]);
 
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+  );
+
   runApp(
     MultiProvider(
       providers: [

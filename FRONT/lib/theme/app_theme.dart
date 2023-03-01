@@ -11,12 +11,12 @@ class AppTheme {
       brightness: Brightness.light,
     ),
     textTheme: TextTheme(
-      headline1: TextStyle(
+      displayLarge: TextStyle(
         fontSize: 35,
         fontWeight: FontWeight.bold,
         color: AppColors.darkBlack,
       ),
-      bodyText2: const TextStyle(
+      bodyMedium: const TextStyle(
         fontSize: 14,
         color: Colors.blue,
       ),
@@ -52,12 +52,12 @@ class AppTheme {
       brightness: Brightness.dark,
     ),
     textTheme: TextTheme(
-      headline1: TextStyle(
+      displayLarge: TextStyle(
         fontSize: 35,
         fontWeight: FontWeight.bold,
         color: AppColors.white,
       ),
-      bodyText2: TextStyle(
+      bodyMedium: TextStyle(
         fontSize: 14,
         color: AppColors.white,
       ),

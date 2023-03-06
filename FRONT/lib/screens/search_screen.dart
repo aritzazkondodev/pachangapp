@@ -29,7 +29,7 @@ class _SearchScreenState extends State<SearchScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text('Buscar', style: Theme.of(context).textTheme.headline1),
+            Text('Buscar', style: Theme.of(context).textTheme.displayLarge),
             const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),

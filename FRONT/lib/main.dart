@@ -19,16 +19,18 @@ void main() async {
   // Status bar transparente
   SystemChrome.setSystemUIOverlayStyle(
     SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
-        systemNavigationBarColor: AppColors.darkBlack,
-        systemNavigationBarContrastEnforced: false  ,
-        ),
+      statusBarColor: AppColors.darkBlack,
+      systemNavigationBarColor: AppColors.darkBlack,
+      systemNavigationBarContrastEnforced: false  ,
+    ),
   );
 
   runApp(
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => NavigationProvider()),
+        ChangeNotifierProvider(create: (_) => LoginRegisterProvider()),
+        ChangeNotifierProvider(create: (_) => LocationProvider()),
         ChangeNotifierProvider(
             create: (_) => ThemeProvider(isDarkMode: Preferences.isDarkMode)),
       ],
@@ -47,7 +49,12 @@ class MyApp extends StatelessWidget {
       title: 'Pachangapp',
       initialRoute: 'main',
       routes: {
+        'welcome': (_) => const WelcomeScreen(),
+        'login': (_) => const LoginScreen(),
+        'register': (_) => const RegisterScreen(),
+
         'main': (_) => const MainScreen(),
+        
       },
       theme: Provider.of<ThemeProvider>(context).currentTheme,
     );

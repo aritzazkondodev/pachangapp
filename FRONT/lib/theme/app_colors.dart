@@ -11,6 +11,9 @@ class AppColors {
   static Color mainColor = const Color.fromARGB(255, 251, 133, 0);
   static Color accentColor = const Color.fromARGB(255, 251, 133, 0);
 
+  static Color buttonColor = const Color.fromARGB(67, 61, 57, 0);
+  static Color buttonLoginRegisterColor = const Color.fromARGB(255, 246, 235, 178);
+
   static Color danger = Colors.red;
 
   //EJEMPLOS

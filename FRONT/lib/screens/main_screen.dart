@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:pachangapp/widgets/user_location.dart';
 import 'package:provider/provider.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -18,43 +19,48 @@ class MainScreen extends StatelessWidget {
     return SafeArea(
       bottom: true,
       child: Scaffold(
-        body: const _HomePageBody(),
+        body: Stack(
+          children: const [
+            _HomePageBody(),
+            Center(child: UserLocation()),
+          ]
+        ),
         bottomNavigationBar: Container(
           color: AppColors.darkBlack,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
             child: GNav(
-                backgroundColor: AppColors.darkBlack,
-                color: Colors.white,
-                activeColor: Colors.white,
-                tabBackgroundColor: AppColors.mainColor,
-                padding: const EdgeInsets.all(15),
-                gap: 8,
-                tabs: const [
-                  GButton(
-                    icon: LineIcons.search,
-                    text: 'Buscar',
-                  ),
-                  GButton(
-                    icon: LineIcons.newspaper,
-                    text: 'Novedades',
-                  ),
-                  GButton(
-                    icon: LineIcons.home,
-                    text: 'Inicio',
-                  ),
-                  GButton(
-                    icon: LineIcons.calendar,
-                    text: 'Reservas',
-                  ),
-                  GButton(
-                    icon: LineIcons.user,
-                    text: 'Perfil',
-                  ),
-                ],
-                selectedIndex: currentIndex,
-                onTabChange: (index) =>
-                    navigationProvider.selectedMenuOpt = index),
+              backgroundColor: AppColors.darkBlack,
+              color: Colors.white,
+              activeColor: Colors.white,
+              tabBackgroundColor: AppColors.mainColor,
+              padding: const EdgeInsets.all(15),
+              gap: 8,
+              tabs: const [
+                GButton(
+                  icon: LineIcons.search,
+                  text: 'Buscar',
+                ),
+                GButton(
+                  icon: LineIcons.newspaper,
+                  text: 'Novedades',
+                ),
+                GButton(
+                  icon: LineIcons.home,
+                  text: 'Inicio',
+                ),
+                GButton(
+                  icon: LineIcons.calendar,
+                  text: 'Reservas',
+                ),
+                GButton(
+                  icon: LineIcons.user,
+                  text: 'Perfil',
+                ),
+              ],
+              selectedIndex: currentIndex,
+              onTabChange: (index) => navigationProvider.selectedMenuOpt = index
+            ),
           ),
         ),
       ),

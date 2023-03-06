@@ -9,34 +9,29 @@ environment:
   sdk: ">=2.18.2 <3.0.0"
 
 dependencies:
+  collapsible_sidebar: ^2.0.3+2
+  cupertino_icons: ^1.0.2
+  dropdown_button2: ^2.0.0
   flutter:
     sdk: flutter
-
-  #Iconos
-  cupertino_icons: ^1.0.2
-  line_icons: ^2.0.0
-  #Manejar state
-  provider: ^6.0.4
-  #Preferencias usuario
-  shared_preferences: ^2.0.15
-  #Navbar inferior
-  google_nav_bar: ^5.0.6
-  #Sidebar perfil
-  collapsible_sidebar: ^2.0.3+2
-  #Componentes UI
+  font_awesome_flutter: ^10.4.0
   getwidget: ^2.0.4
+  google_nav_bar: ^5.0.6
+  line_icons: ^2.0.0
+  provider: ^6.0.5
+  shared_preferences: ^2.0.15
 
 dev_dependencies:
+  flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
-
-  flutter_lints: ^2.0.0
 
 flutter:
   uses-material-design: true
 
   assets:
     - assets/
+    - assets/img/
 
   fonts:
     - family: Rubik

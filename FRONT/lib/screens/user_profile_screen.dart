@@ -184,6 +184,7 @@ class __ConfigurationPageState extends State<_ConfigurationPage> {
             ElevatedButton(
               onPressed: () {
                 //TODO: Implementar logout
+                Navigator.pushReplacementNamed(context, 'welcome');
               },
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(AppColors.danger)),
